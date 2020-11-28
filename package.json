@@ -1,0 +1,21 @@
+{
+    "name": "menta",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "mail": "node index.js mail",
+        "text": "node index.js text",
+        "serve": "node index.js mail 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "cheerio": "^1.0.0-rc.3",
+        "nodemailer": "^6.4.16",
+        "request": "^2.88.2",
+        "request-promise": "^4.2.6",
+        "sendmail": "^1.6.1"
+    }
+}
