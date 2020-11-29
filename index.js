@@ -25,13 +25,12 @@ const promises = [...Array(3)].map((_, i) => {
             return cheerio.load(body);
         }
     });
-    const titleList = [];
-    // リスト表記されている内容をパース（適宜修正）
-    $('.title').each((i, elem) => {
-        const title = $(elem).html()
-        titleList.push(`${title}`);
-    });
-    return titleList;
+    return $('.title').map((i, el) => {
+        const link = $(el).html().split('href="')[1].split('">')[0];
+        const page = `${url.split('=')[1]}${pz(i)}`;
+        const title = $(el).text().trim().replace(/\r?\n/g, "");
+        return `${page}\t${title}\t${link}`;
+    }).get().join(' ');
 });
 
 const getNewPosts = async() => {

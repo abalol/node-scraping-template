@@ -1,5 +1,5 @@
 {
-    "name": "menta",
+    "name": "node-scraping-template",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
@@ -17,5 +17,6 @@
         "request": "^2.88.2",
         "request-promise": "^4.2.6",
         "sendmail": "^1.6.1"
-    }
+    },
+    "repository": "git@github.com:abalol/node-scraping-template.git"
 }
